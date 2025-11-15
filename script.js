@@ -61,22 +61,22 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!terminalCommand || !terminalLine) return;
     
     const commands = [
-        { text: 'whoami', delay: 100 },
-        { text: '', delay: 800 },
-        { text: '\nJustin Schofield - Cybersecurity Analyst', delay: 80 },
-        { text: '', delay: 1000 },
-        { text: '\n\njustin@cybersecurity:~$ nmap --version', delay: 100 },
-        { text: '', delay: 600 },
-        { text: '\nNmap 7.94', delay: 80 },
-        { text: '', delay: 1000 },
-        { text: '\n\njustin@cybersecurity:~$ ls education', delay: 100 },
-        { text: '', delay: 600 },
-        { text: '\nMaster of Science in Cybersecurity and Information Assurance', delay: 80 },
-        { text: '', delay: 1000 },
-        { text: '\n\njustin@cybersecurity:~$ cat certifications.txt', delay: 100 },
-        { text: '', delay: 600 },
-        { text: '\nSecurityX, CySA+, PenTest+, Security+, Network+, CS50', delay: 80 },
-        { text: '', delay: 500 }
+        { text: 'whoami', delay: 50 },
+        { text: '', delay: 400 },
+        { text: '\nJustin Schofield - Cybersecurity Analyst', delay: 40 },
+        { text: '', delay: 500 },
+        { text: '\n\njustin@cybersecurity:~$ nmap --version', delay: 50 },
+        { text: '', delay: 300 },
+        { text: '\nNmap 7.94', delay: 40 },
+        { text: '', delay: 500 },
+        { text: '\n\njustin@cybersecurity:~$ ls education', delay: 50 },
+        { text: '', delay: 300 },
+        { text: '\nMaster of Science in Cybersecurity and Information Assurance', delay: 40 },
+        { text: '', delay: 500 },
+        { text: '\n\njustin@cybersecurity:~$ cat certifications.txt', delay: 50 },
+        { text: '', delay: 300 },
+        { text: '\nSecurityX, CySA+, PenTest+, Security+, Network+, CS50', delay: 40 },
+        { text: '', delay: 250 }
     ];
     
     let commandIndex = 0;
@@ -100,11 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
             commandIndex++;
             charIndex = 0;
             if (commandIndex < commands.length) {
-                setTimeout(typeCommand, 500);
+                setTimeout(typeCommand, 250);
             }
         }
     }
     
     // Start typing after a short delay
-    setTimeout(typeCommand, 1000);
+    setTimeout(typeCommand, 500);
 });
