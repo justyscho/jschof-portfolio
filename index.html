@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Schofield - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Justin Schofield</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-social-icons">
+                <a href="https://www.linkedin.com/in/justin-schofield-a634a6330" target="_blank" class="nav-social-icon" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="mailto:Justinschofield19@gmail.com" class="nav-social-icon" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/justyscho" target="_blank" class="nav-social-icon" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line1">Cyber Security</span>
+                    <span class="hero-title-line2">Analyst / Engineer</span>
+                </h1>
+                <p class="hero-description">
+                    I am Justin Schofield, a Cybersecurity Analyst/Engineer located in Salt Lake City, UT, with expertise in vulnerability management, penetration testing, and identity/access management. I have experience securing medical device systems and IT environments, with proven ability to deliver measurable results ($2.16M annual impact at NarcBox).
+                </p>
+            </div>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-button terminal-button-close"></span>
+                            <span class="terminal-button terminal-button-minimize"></span>
+                            <span class="terminal-button terminal-button-maximize"></span>
+                        </div>
+                        <div class="terminal-title">justin@cybersecurity:~</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line" id="terminal-output">
+                            <span class="terminal-prompt">justin@cybersecurity:~$</span><span class="terminal-command"></span><span class="terminal-cursor">█</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="certifications-container">
+            <span class="section-label">CERTIFICATIONS</span>
+            <h2 class="section-title">Professional Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="images/certificates/SecurityX-jpg.jpg" alt="CompTIA CASP+ (SecurityX)">
+                    </div>
+                    <h3 class="cert-name">CompTIA CASP+ (SecurityX)</h3>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="images/certificates/CySA+-jpg.jpg" alt="CompTIA CySA+">
+                    </div>
+                    <h3 class="cert-name">CompTIA CySA+</h3>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="images/certificates/PenTest+-jpg.jpg" alt="CompTIA PenTest+">
+                    </div>
+                    <h3 class="cert-name">CompTIA PenTest+</h3>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="images/certificates/Security+-jpg.jpg" alt="CompTIA Security+">
+                    </div>
+                    <h3 class="cert-name">CompTIA Security+</h3>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="images/certificates/Network+-jpg.jpg" alt="CompTIA Network+">
+                    </div>
+                    <h3 class="cert-name">CompTIA Network+</h3>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="images/certificates/Harvard.jpg" alt="Harvard CS50">
+                    </div>
+                    <h3 class="cert-name">Harvard CS50 (Computer Science Foundations)</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-container">
+            <span class="section-label">PORTFOLIO</span>
+            <h2 class="section-title">Tools</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3 class="portfolio-item-title">Burp Suite</h3>
+                    <p class="portfolio-description">
+                        I use Burp Suite to find vulnerabilities in websites by using their SQL injection, No-Redirect and SSRF tools. It's my primary tool for web application security testing and vulnerability assessment.
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3 class="portfolio-item-title">Nmap</h3>
+                    <p class="portfolio-description">
+                        I use Nmap for network reconnaissance, port scanning, service detection, and OS fingerprinting. It's essential for identifying open ports, services, and potential entry points in network security assessments.
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3 class="portfolio-item-title">Wireshark</h3>
+                    <p class="portfolio-description">
+                        I use Wireshark for network protocol analysis, packet capture, and traffic analysis. It's invaluable for digital forensic investigations and understanding network communications during security assessments.
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3 class="portfolio-item-title">SIEM</h3>
+                    <p class="portfolio-description">
+                        I work with SIEM solutions for security information and event management, log analysis, threat detection, and incident response. This enables real-time monitoring and correlation of security events.
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3 class="portfolio-item-title">FTK Imager</h3>
+                    <p class="portfolio-description">
+                        I use FTK Imager for digital forensic investigations, disk imaging, and evidence collection. It's crucial for preserving and analyzing digital evidence in cybersecurity incidents and investigations.
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <h3 class="portfolio-item-title">Metasploit</h3>
+                    <p class="portfolio-description">
+                        I use Metasploit for penetration testing, exploit development, and vulnerability validation. It's a powerful framework for testing security defenses and validating security controls.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-container">
+            <span class="section-label">SKILLS</span>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Burp Suite</div>
+                <div class="skill-item">Nessus</div>
+                <div class="skill-item">Nmap</div>
+                <div class="skill-item">Wireshark</div>
+                <div class="skill-item">Metasploit</div>
+                <div class="skill-item">FTK Imager</div>
+                <div class="skill-item">Autopsy</div>
+                <div class="skill-item">ScoutSuite</div>
+                <div class="skill-item">OpenVAS</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Bash</div>
+                <div class="skill-item">PowerShell</div>
+                <div class="skill-item">PHP</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Active Directory</div>
+                <div class="skill-item">RBAC</div>
+                <div class="skill-item">IAM</div>
+                <div class="skill-item">SIEM</div>
+                <div class="skill-item">AWS</div>
+                <div class="skill-item">Docker</div>
+                <div class="skill-item">VMware</div>
+                <div class="skill-item">Kali Linux</div>
+                <div class="skill-item">Windows Server</div>
+                <div class="skill-item">Linux</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="experiences">
+        <div class="experiences-container">
+            <span class="section-label">EXPERIENCES</span>
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="experience-card">
+                <span class="experience-year">2022</span>
+                <h3 class="experience-title">Medical Device Security Specialist</h3>
+                <p class="experience-company">NarcBox, Salt Lake City, UT <a href="#" class="external-link" aria-label="External Link">↗</a></p>
+                <p class="experience-description">Jul 2022 – Present</p>
+                <ul class="experience-list">
+                    <li>Assemble and produce DEA-compliant medical storage solutions focusing on access control, compliance, and security</li>
+                    <li>Conducted precision assembly of hardware and performed quality assurance on software</li>
+                    <li>Apply electrical troubleshooting, soldering, and biometric integration</li>
+                    <li>Ensure adherence to strict security and industry standards for durability and functionality</li>
+                    <li>Directly contributed to $2.16M in annual company revenue through consistent, high-volume secure device production</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <span class="experience-year">2025</span>
+                <h3 class="experience-title">LLM Reviewer</h3>
+                <p class="experience-company">Handshake AI (Project Canary), Remote <a href="#" class="external-link" aria-label="External Link">↗</a></p>
+                <p class="experience-description">Sep 2025 - Nov 2025</p>
+                <ul class="experience-list">
+                    <li>Served as a cybersecurity-focused AI Reviewer for Project Canary, an AI research initiative advancing multimodal reasoning and secure model behavior</li>
+                    <li>Evaluated complex text and image datasets to identify vulnerabilities in reasoning, data labeling, and system reliability</li>
+                    <li>Contributed to strengthening large language model performance and trustworthiness</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <span class="experience-year">2023</span>
+                <h3 class="experience-title">Sales Consultant</h3>
+                <p class="experience-company">Curated, Remote <a href="#" class="external-link" aria-label="External Link">↗</a></p>
+                <p class="experience-description">Feb 2023 - Feb 2025</p>
+                <ul class="experience-list">
+                    <li>Provided expert e-commerce consultation and tailored equipment recommendations to enhance customer experience</li>
+                    <li>Utilized analytics and CRM tools to track client preferences, increasing retention and sales</li>
+                    <li>Facilitated product demos and technical Q&A to support high-value outdoor and technical gear sales</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <span class="experience-year">2017</span>
+                <h3 class="experience-title">Gearhead (Sales & Customer Service Specialist)</h3>
+                <p class="experience-company">Backcountry, West Valley City, UT <a href="#" class="external-link" aria-label="External Link">↗</a></p>
+                <p class="experience-description">Nov 2017 - Jun 2022</p>
+                <ul class="experience-list">
+                    <li>Delivered personalized customer service and technical advice across outdoor gear categories</li>
+                    <li>Managed product sales, returns, exchanges, and warranty claims while maintaining a 95% customer satisfaction rating</li>
+                    <li>Provided feedback to product teams to improve specifications, user safety, and design efficiency</li>
+                    <li>Supported seasonal training programs for new team members and contributed to digital catalog optimization</li>
+                </ul>
+            </div>
+
+            <hr class="section-divider">
+
+            <span class="section-label">EXPERIENCES</span>
+            <h2 class="section-title">Education</h2>
+            
+            <div class="experience-card">
+                <span class="experience-year">2025</span>
+                <h3 class="experience-title">Master of Science in Cybersecurity</h3>
+                <p class="experience-company">Western Governors University</p>
+                <p class="experience-description">October 2025 - November 2025</p>
+                <ul class="experience-list">
+                    <li>Designed secure network architectures and assessed vulnerability in wireless and cloud environments</li>
+                    <li>Developed secure software design practices using SDLC, Agile, and DevSecOps principles, enforcing defense in depth</li>
+                    <li>Applied NIST RMF, ISO 27001, and GDPR frameworks to governance, risk, and compliance initiatives</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <span class="experience-year">2023 - 2025</span>
+                <h3 class="experience-title">Bachelor of Science in Cybersecurity</h3>
+                <p class="experience-company">Franklin University, Columbus, OH</p>
+                <p class="experience-description">Completed 2025</p>
+                <ul class="experience-list">
+                    <li>Capstone: Implemented hierarchical Role-Based Access Control (RBAC) for a mid-sized org (150+ employees) using Active Directory security groups following least privilege principles</li>
+                    <li>Conducted digital forensic investigations with FTK Imager, Autopsy, and Wireshark</li>
+                    <li>Applied Python, Bash, PowerShell, and PHP/MySQL skills for code analysis and secure development</li>
+                    <li>Gained experience with NIST standards, SDLC, MITRE, GDPR, AI automation, and cloud deployment models (AWS, Azure)</li>
+                </ul>
+                <a href="#certificates" class="certificates-link">Certificates →</a>
+            </div>
+
+            <div class="experience-card">
+                <span class="experience-year">2017 - 2020</span>
+                <h3 class="experience-title">Associate Degree</h3>
+                <p class="experience-company">Salt Lake Community College</p>
+                <p class="experience-description">
+                    Completed foundational coursework and general education requirements.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <span class="section-label">CONTACT</span>
+            <h2 class="section-title">Get in touch</h2>
+            <div class="contact-buttons">
+                <a href="https://www.linkedin.com/in/justin-schofield-a634a6330" target="_blank" class="contact-button linkedin">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:Justinschofield19@gmail.com" class="contact-button mail">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                    </svg>
+                    <span>Mail</span>
+                </a>
+                <a href="https://github.com/justyscho" target="_blank" class="contact-button github">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span class="logo-text">Justin Schofield</span>
+            </div>
+            <div class="footer-links">
+                <a href="#experiences">EXPERIENCES</a>
+                <a href="#about">MENU</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
