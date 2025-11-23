@@ -61,28 +61,48 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!terminalCommand || !terminalLine) return;
     
     const commands = [
-        { text: 'whoami', delay: 50 },
-        { text: '', delay: 400 },
-        { text: '\nJustin Schofield - Cybersecurity Analyst', delay: 40 },
-        { text: '', delay: 500 },
-        { text: '\n\njustin@cybersecurity:~$ nmap --version', delay: 50 },
-        { text: '', delay: 300 },
-        { text: '\nNmap 7.94', delay: 40 },
-        { text: '', delay: 500 },
-        { text: '\n\njustin@cybersecurity:~$ ls education', delay: 50 },
-        { text: '', delay: 300 },
-        { text: '\nMaster of Science in Cybersecurity and Information Assurance', delay: 40 },
-        { text: '', delay: 500 },
-        { text: '\n\njustin@cybersecurity:~$ cat certifications.txt', delay: 50 },
-        { text: '', delay: 300 },
-        { text: '\nSecurityX, CySA+, PenTest+, Security+, Network+, CS50', delay: 40 },
-        { text: '', delay: 250 }
+        { text: 'whoami', delay: 33, isPrompt: false },
+        { text: '', delay: 267, isPrompt: false },
+        { text: 'Justin Schofield - Cybersecurity Analyst', delay: 27, isPrompt: false, isOutput: true },
+        { text: '', delay: 333, isPrompt: false },
+        { text: 'nmap --version', delay: 33, isPrompt: false, newLine: true },
+        { text: '', delay: 200, isPrompt: false },
+        { text: 'Nmap 7.94', delay: 27, isPrompt: false, isOutput: true },
+        { text: '', delay: 333, isPrompt: false },
+        { text: 'ls education', delay: 33, isPrompt: false, newLine: true },
+        { text: '', delay: 200, isPrompt: false },
+        { text: 'Master of Science in Cybersecurity and Information Assurance', delay: 27, isPrompt: false, isOutput: true },
+        { text: '', delay: 333, isPrompt: false },
+        { text: 'cat certifications.txt', delay: 33, isPrompt: false, newLine: true },
+        { text: '', delay: 200, isPrompt: false },
+        { text: 'SecurityX, CySA+, PenTest+, Security+, Network+, CS50', delay: 27, isPrompt: false, isOutput: true },
+        { text: '', delay: 167, isPrompt: false }
     ];
     
     let commandIndex = 0;
     let charIndex = 0;
-    let currentText = '';
-    const prompt = '<span class="terminal-prompt">justin@cybersecurity:~$</span>';
+    const cursorHTML = terminalCursor.outerHTML;
+    
+    function processText(text, isOutput, newLine) {
+        let html = '';
+        if (newLine) {
+            html += '<br>';
+            html += '<span class="terminal-prompt">justin@cybersecurity:~$</span>';
+        }
+        if (text.trim()) {
+            // If it's output, it should be on a new line (after the command output)
+            if (isOutput) {
+                html += '<br>';
+            }
+            // Wrap in appropriate class
+            if (isOutput) {
+                html += '<span class="terminal-output">' + text + '</span>';
+            } else {
+                html += '<span class="terminal-command">' + text + '</span>';
+            }
+        }
+        return html;
+    }
     
     function typeCommand() {
         if (commandIndex >= commands.length) {
@@ -92,19 +112,81 @@ document.addEventListener('DOMContentLoaded', function() {
         const command = commands[commandIndex];
         
         if (charIndex < command.text.length) {
-            currentText += command.text[charIndex];
-            terminalCommand.textContent = currentText;
+            const char = command.text[charIndex];
+            const partialText = command.text.substring(0, charIndex + 1);
+            
+            // Build HTML for current state
+            let html = '';
+            
+            // Include all previous commands
+            let firstCommandProcessed = false;
+            for (let i = 0; i < commandIndex; i++) {
+                const cmd = commands[i];
+                // Add prompt before first command
+                if (i === 0 && cmd.text && !firstCommandProcessed) {
+                    html += '<span class="terminal-prompt">justin@cybersecurity:~$</span>';
+                    firstCommandProcessed = true;
+                }
+                if (cmd.text) {
+                    html += processText(cmd.text, cmd.isOutput, cmd.newLine);
+                }
+            }
+            
+            // Include current command being typed
+            if (command.text) {
+                // For first command, add prompt before it
+                if (commandIndex === 0) {
+                    html += '<span class="terminal-prompt">justin@cybersecurity:~$</span>';
+                    const currentCmd = { ...command, text: partialText };
+                    html += processText(currentCmd.text, currentCmd.isOutput, false);
+                } else {
+                    const currentCmd = { ...command, text: partialText };
+                    html += processText(currentCmd.text, currentCmd.isOutput, currentCmd.newLine);
+                }
+            }
+            
+            terminalLine.innerHTML = html + cursorHTML;
             charIndex++;
             setTimeout(typeCommand, command.delay);
         } else {
             commandIndex++;
             charIndex = 0;
             if (commandIndex < commands.length) {
-                setTimeout(typeCommand, 250);
+                setTimeout(typeCommand, 167);
             }
         }
     }
     
     // Start typing after a short delay
-    setTimeout(typeCommand, 500);
+    setTimeout(typeCommand, 333);
+});
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            }
+        });
+    }
 });
